@@ -1,7 +1,40 @@
 import Link from "next/link";
 import Image from "next/image";
+import { useState, FormEvent } from "react";
 
 const ForgotPassword = () => {
+  const [email, setEmail] = useState("");
+
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+
+    if (!email) {
+      alert("Por favor, insira o e-mail.");
+      return;
+    }
+
+    try {
+      const response = await fetch("/api/auth/forgot-password", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert(data.message);
+      } else {
+        alert("Erro: " + data.message);
+      }
+    } catch (error) {
+      console.error("Erro ao enviar solicitação:", error);
+      alert("Erro ao processar a solicitação.");
+    }
+  };
+
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
       <Image
@@ -20,7 +53,7 @@ const ForgotPassword = () => {
       <p className="text-center text-gray-500 mt-2">
         Insira seu e-mail abaixo para receber o código de autenticação por e-mail.
       </p>
-      <form className="mt-6 w-full max-w-sm space-y-4">
+      <form className="mt-6 w-full max-w-sm space-y-4" onSubmit={handleSubmit}>
         <div>
           <label
             htmlFor="email"
@@ -29,10 +62,12 @@ const ForgotPassword = () => {
             E-mail*
           </label>
           <input
-            type="text"
-            id="cpf"
+            type="email"
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
-            placeholder="exemple@gmail.com"
+            placeholder="exemplo@gmail.com"
           />
         </div>
         <div className="flex justify-center space-x-4">
