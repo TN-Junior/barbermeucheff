@@ -81,12 +81,12 @@ const Login = () => {
             >
               CADASTRE-SE
             </Link>
-            <a
-              href="#"
+            <Link
+              href="/forgot-password"
               className="block text-sm text-blue-500 hover:underline mt-4"
             >
               Esqueceu sua senha?
-            </a>
+            </Link>
           </div>
         </div>
       </div>
