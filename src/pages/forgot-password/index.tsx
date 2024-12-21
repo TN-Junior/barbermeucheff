@@ -44,8 +44,8 @@ const ForgotPassword = () => {
         height={110}
         priority // Evita carregamento assíncrono no SSR
       />
-      <h1 className="text-4xl font-bold text-blue-700 mt-4">
-        Barbearia<span className="text-blue-500">MeuCheff</span>
+      <h1 className="text-4xl font-bold text-black-700 mt-4">
+        Barbearia<span className="text-gray-500">MeuCheff</span>
       </h1>
       <h2 className="text-lg font-medium text-gray-700 mt-4">
         Solicitar redefinição de senha
@@ -73,13 +73,13 @@ const ForgotPassword = () => {
         <div className="flex justify-center space-x-4">
           <Link
             href="/login"
-            className="w-full text-center border border-blue-700 text-blue-700 py-2 px-4 rounded-lg hover:bg-blue-50 transition"
+            className="w-full text-center border border-gray-700 text-gray-700 py-2 px-4 rounded-lg hover:bg-gray-50 transition"
           >
             Voltar
           </Link>
           <button
             type="submit"
-            className="w-full bg-blue-700 text-white py-2 px-4 rounded-lg hover:bg-blue-800 transition"
+            className="w-full bg-red-700 text-white py-2 px-4 rounded-lg hover:bg-red-800 transition"
           >
             Receber código
           </button>

@@ -6,8 +6,8 @@ const Signup = () => {
     <div className="min-h-screen bg-gray-100 py-6 px-8">
       {/* Título */}
       <div className="text-center mb-8">
-        <h1 className="text-4xl font-bold text-blue-700">
-          Barbearia<span className="text-blue-500">MeuCheff</span>
+        <h1 className="text-4xl font-bold text-black-700">
+          Barbearia<span className="text-gray-500">MeuCheff</span>
         </h1>
         <p className="text-gray-600 font-semibold">Informações Pessoais</p>
       </div>
@@ -85,7 +85,7 @@ const Signup = () => {
       <div className="mt-6 max-w-5xl mx-auto text-right">
         <button
           type="submit"
-          className="bg-blue-500 text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-600 transition"
+          className="bg-red-500 text-white font-bold py-2 px-6 rounded-lg hover:bg-red-600 transition"
         >
           CADASTRAR
         </button>
