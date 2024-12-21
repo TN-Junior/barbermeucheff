@@ -12,9 +12,9 @@ const HeroSection: React.FC = () => {
   return (
     <section
       className="bg-cover bg-center h-screen"
-      style={{ backgroundImage: "url('/barbearia-banner.jpg')" }}
+      style={{ backgroundImage: "url('/images/banner-barber.jpg')" }}
     >
-      <div className="flex flex-col items-center justify-center h-full bg-black bg-opacity-50 text-white">
+      <div className="flex flex-col items-center justify-center h-full bg-black bg-opacity-60 text-white">
         <h2 className="text-5xl font-bold mb-4">Transforme seu estilo</h2>
         <p className="text-lg mb-8">
           Agende seu corte com os melhores profissionais
