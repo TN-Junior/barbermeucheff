@@ -8,7 +8,7 @@ const Login = () => {
       {/* Lado esquerdo com imagem */}
       <div className="hidden lg:flex flex-1 items-center justify-center bg-gray-900 relative">
         <Image
-          src="/images/background.jpg" // Caminho da imagem
+          src="/images/login.jpg" // Caminho da imagem
           alt="Background"
           layout="fill"
           objectFit="cover"
@@ -16,7 +16,7 @@ const Login = () => {
         />
         <div className="absolute z-10 bg-white p-8 rounded-full shadow-lg">
           <Image
-            src="/images/logo.svg" // Caminho do logo
+            src="/images/logoo.jpg" // Caminho do logo
             alt="Logo"
             width={120}
             height={120}
