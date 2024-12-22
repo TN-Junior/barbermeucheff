@@ -1,3 +1,17 @@
+import React from "react";
+import HeroSection from "../components/HeroSection/HeroSection";
+import Header from "../components/header/Header";
+import Footer from "../components/footer/Footer";
+import Services from "../components/Services/Services";
+import "../styles/_app";
+
 export default function Home() {
-  return <h1>Bem-vindo ao App Router com TypeScript!</h1>;
+  return (
+    <>
+      <Header />
+      <HeroSection />
+      <Services />
+      <Footer />
+      </>
+  );
 }
