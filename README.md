@@ -1,24 +1,14 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Barbearia App
 
-## Getting Started
+Este projeto foi desenvolvido para criar uma aplicação web para uma barbearia. Os usuários podem se cadastrar, fazer login, verificar os serviços disponíveis e agendar dias e horários diretamente pela plataforma. O projeto foi desenvolvido com **Next.js** tanto no front-end quanto no back-end, aproveitando ao máximo suas capacidades de renderização híbrida e API routes.
 
-First, run the development server:
+## Funcionalidades
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Cadastro e Login de Usuários**: Interface amigável para que novos usuários se registrem e clientes existentes façam login.
+- **Exibição de Serviços**: Lista de serviços oferecidos pela barbearia com descrições e valores.
+- **Agendamento de Serviços**: Escolha de datas e horários disponíveis para marcar um atendimento.
+- **Backend Integrado**: Utilização de rotas API do Next.js para gerenciar autenticação, agendamentos e outros dados.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ## Technologies Used
 
@@ -28,6 +18,7 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Vercel-black?style=for-the-badge&logo=vercel&logoColor=white)
 
+<!--
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
@@ -41,4 +32,4 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details. -->
