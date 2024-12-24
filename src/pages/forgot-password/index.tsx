@@ -4,17 +4,19 @@ import { useState, FormEvent } from "react";
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
     if (!email) {
-      alert("Por favor, insira o e-mail.");
+      setErrorMessage("Por favor, insira o e-mail.");
       return;
     }
 
     try {
-      const response = await fetch("/api/auth/forgot-password", {
+      const response = await fetch("/api/reset-password", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -25,13 +27,17 @@ const ForgotPassword = () => {
       const data = await response.json();
 
       if (response.ok) {
-        alert(data.message);
+        setMessage(data.message);
+        setErrorMessage("");
+        setEmail(""); // Limpar o campo de e-mail após o sucesso
       } else {
-        alert("Erro: " + data.message);
+        setErrorMessage(data.message || "Erro desconhecido.");
+        setMessage("");
       }
     } catch (error) {
       console.error("Erro ao enviar solicitação:", error);
-      alert("Erro ao processar a solicitação.");
+      setErrorMessage("Erro ao processar a solicitação.");
+      setMessage("");
     }
   };
 
@@ -54,6 +60,7 @@ const ForgotPassword = () => {
         Insira seu e-mail abaixo para receber o código de autenticação por e-mail.
       </p>
       <form className="mt-6 w-full max-w-sm space-y-4" onSubmit={handleSubmit}>
+        {/* Campo de E-mail */}
         <div>
           <label
             htmlFor="email"
@@ -70,6 +77,18 @@ const ForgotPassword = () => {
             placeholder="exemplo@gmail.com"
           />
         </div>
+
+        {/* Mensagem de erro */}
+        {errorMessage && (
+          <p className="text-sm text-red-500 text-center">{errorMessage}</p>
+        )}
+
+        {/* Mensagem de sucesso */}
+        {message && (
+          <p className="text-sm text-green-500 text-center">{message}</p>
+        )}
+
+        {/* Botões */}
         <div className="flex justify-center space-x-4">
           <Link
             href="/login"
