@@ -1,9 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { useRouter } from "next/router";
 import "../styles/_app";
 
 const Login = () => {
+  const router = useRouter();
+
   // Estados para capturar os valores dos campos
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -25,12 +28,11 @@ const Login = () => {
         throw new Error(data.error || "Erro desconhecido");
       }
 
-      // Exibe sucesso (ou redireciona)
-      console.log("Login bem-sucedido:", data);
-      alert("Login bem-sucedido!");
+      // Salva o token no localStorage
+      localStorage.setItem("token", data.token);
 
-      // Redirecione para a página inicial ou dashboard
-      window.location.href = "/";
+      // Redireciona para a rota inicial
+      router.push("/");
     } catch (error: any) {
       setErrorMessage(error.message);
     }
@@ -122,7 +124,7 @@ const Login = () => {
             <p className="text-red-600 text-sm">ou</p>
             <Link
               href="/signup"
-              className="block border border-gray-700 text-gray -700 py-2 px-4 rounded-lg hover:bg-red-50 transition mt-2"
+              className="block border border-gray-700 text-gray-700 py-2 px-4 rounded-lg hover:bg-red-50 transition mt-2"
             >
               CADASTRE-SE
             </Link>
