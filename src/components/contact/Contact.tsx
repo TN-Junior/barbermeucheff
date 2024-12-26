@@ -29,12 +29,12 @@ const Contact: React.FC = () => {
           <div>
             <h4 className="font-bold">WhatsApp</h4>
             <a
-              href="https://wa.me/5581984417364"
+              href="https://wa.me/5581983061861"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-gray-300"
             >
-              +55 81 98441-7364
+              +55 81 98306-1861
             </a>
           </div>
         </div>
