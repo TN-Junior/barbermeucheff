@@ -3,7 +3,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons"; // Ícone do Instagram
 import Image from "next/image";
 import "../../styles/_app";
 
@@ -45,21 +45,21 @@ const Contact: React.FC = () => {
           </div>
         </div>
 
-        {/* Email */}
+        {/* Instagram */}
         <div className="bg-[#121212] px-6 py-4 rounded-lg shadow-md flex items-center gap-4 w-64 text-center">
           <FontAwesomeIcon
-            icon={faPaperPlane}
-            className="text-blue-500 text-2xl"
+            icon={faInstagram}
+            className="text-pink-500 text-2xl"
           />
           <div>
-            <h4 className="font-bold">Email</h4>
+            <h4 className="font-bold">Instagram</h4>
             <a
-              href="mailto:tary.junior47@gmail.com"
+              href="https://instagram.com/seu_usuario" // Substitua pelo seu link do Instagram
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-gray-300"
             >
-              tary.junior47@gmail.com
+              @seu_usuario
             </a>
           </div>
         </div>
