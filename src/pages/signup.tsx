@@ -9,29 +9,24 @@ const Signup = () => {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-
+  
     setMessage("");
     setErrorMessage("");
-
+  
     if (!fullName || !email || !password) {
       setErrorMessage("Todos os campos são obrigatórios.");
       return;
     }
-
+  
     try {
-      console.log("Enviando dados:", { fullName, email, password });
-
-      const response = await fetch("/api/signup", {
+      const response = await fetch("http://localhost:8081/auth/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ fullName, email, password }),
+        body: JSON.stringify({ name: fullName, email, password }),
       });
-
-      console.log("Resposta da API:", response);
-
+  
       const data = await response.json();
-      console.log("Dados retornados:", data);
-
+  
       if (response.ok) {
         setMessage(data.message || "Cadastro realizado com sucesso!");
         setFullName("");
@@ -41,10 +36,10 @@ const Signup = () => {
         setErrorMessage(data.error || "Erro ao cadastrar.");
       }
     } catch (error) {
-      console.error("Erro ao enviar solicitação:", error);
       setErrorMessage("Erro ao processar a solicitação.");
     }
   };
+  
 
   return (
     <div className="min-h-screen bg-gray-100 py-6 px-8">
