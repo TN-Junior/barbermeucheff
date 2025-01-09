@@ -1,3 +1,4 @@
+{/*
 import { NextApiRequest, NextApiResponse } from "next";
 import { createClient } from "@supabase/supabase-js";
 
@@ -27,3 +28,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(401).json({ error: error.message });
   }
 }
+*/}

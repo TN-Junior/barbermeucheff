@@ -1,3 +1,5 @@
+{/*
+
 import { NextApiRequest, NextApiResponse } from "next";
 import { createClient } from "@supabase/supabase-js";
 
@@ -57,3 +59,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.status(400).json({ error: error.message || "Erro desconhecido." });
   }
 }
+
+*/}
