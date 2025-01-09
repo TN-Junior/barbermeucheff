@@ -1,4 +1,4 @@
-import { useState, FormEvent } from "react";
+{/*import { useState, FormEvent } from "react";
 
 const Signup = () => {
   const [fullName, setFullName] = useState("");
@@ -133,3 +133,4 @@ const Signup = () => {
 };
 
 export default Signup;
+*/}

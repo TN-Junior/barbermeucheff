@@ -1,4 +1,4 @@
-import Link from "next/link";
+{/*import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { useRouter } from "next/router";
@@ -38,7 +38,7 @@ const Login = () => {
   return (
     <div className="flex h-screen">
       {/* Lado esquerdo com imagem */}
-      <div className="hidden lg:flex flex-1 items-center justify-center bg-gray-900 relative">
+    {/*  <div className="hidden lg:flex flex-1 items-center justify-center bg-gray-900 relative">
         <Image
           src="/images/login.jpg"
           alt="Background"
@@ -57,14 +57,16 @@ const Login = () => {
       </div>
 
       {/* Lado direito com formulário */}
+      {/*
       <div className="flex flex-1 flex-col justify-center items-center bg-white">
         <div className="w-80">
           <h1 className="text-4xl font-bold text-gray-700 mb-4 text-center">
             Barbearia<span className="text-gray-500">MeuCheff</span>
           </h1>
 
-          <form className="space-y-4" onSubmit={handleSubmit}>
+          <form className="space-y-4" onSubmit={handleSubmit}>*/}
             {/* Campo de E-mail */}
+            {/*
             <div>
               <label
                 htmlFor="email"
@@ -82,7 +84,7 @@ const Login = () => {
               />
             </div>
 
-            {/* Campo de Senha */}
+            
             <div>
               <label
                 htmlFor="password"
@@ -103,12 +105,11 @@ const Login = () => {
               </p>
             </div>
 
-            {/* Mensagem de erro */}
             {errorMessage && (
               <p className="text-sm text-red-500 text-center">{errorMessage}</p>
             )}
 
-            {/* Botão de Login */}
+            
             <button
               type="submit"
               className="w-full bg-red-700 text-white py-2 px-4 rounded-lg hover:bg-red-800 transition"
@@ -139,3 +140,4 @@ const Login = () => {
 };
 
 export default Login;
+*/}
