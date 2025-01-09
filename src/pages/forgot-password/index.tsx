@@ -1,4 +1,5 @@
-import Link from "next/link";
+{/*
+  import Link from "next/link";
 import Image from "next/image";
 import { useState, FormEvent } from "react";
 
@@ -60,7 +61,7 @@ const ForgotPassword = () => {
         Insira seu e-mail abaixo para receber o código de autenticação por e-mail.
       </p>
       <form className="mt-6 w-full max-w-sm space-y-4" onSubmit={handleSubmit}>
-        {/* Campo de E-mail */}
+   
         <div>
           <label
             htmlFor="email"
@@ -78,17 +79,15 @@ const ForgotPassword = () => {
           />
         </div>
 
-        {/* Mensagem de erro */}
+
         {errorMessage && (
           <p className="text-sm text-red-500 text-center">{errorMessage}</p>
         )}
 
-        {/* Mensagem de sucesso */}
         {message && (
           <p className="text-sm text-green-500 text-center">{message}</p>
         )}
 
-        {/* Botões */}
         <div className="flex justify-center space-x-4">
           <Link
             href="/login"
@@ -109,3 +108,4 @@ const ForgotPassword = () => {
 };
 
 export default ForgotPassword;
+*/}
