@@ -2,7 +2,7 @@
 import React from "react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
-import "../../styles/_app";
+import "globals.css"
 
 const Home: React.FC = () => {
   const router = useRouter();

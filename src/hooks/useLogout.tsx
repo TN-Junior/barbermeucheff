@@ -1,4 +1,6 @@
-import { useRouter } from "next/router";
+
+{/*
+  import { useRouter } from "next/router";
 
 const useLogout = () => {
   const router = useRouter();
@@ -15,3 +17,4 @@ const useLogout = () => {
 };
 
 export default useLogout;
+*/}

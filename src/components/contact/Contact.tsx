@@ -1,3 +1,4 @@
+{/*
 "use client";
 
 import React from "react";
@@ -10,7 +11,7 @@ import "../../styles/_app";
 const Contact: React.FC = () => {
   return (
     <section className="min-h-screen bg-black text-white flex flex-col items-center justify-center px-4 py-16">
-      {/* Título */}
+  
       <div className="text-center mb-8">
         <p className="text-red-500 text-sm font-semibold">../contact</p>
         <div className="flex flex-col items-center justify-center">
@@ -24,9 +25,9 @@ const Contact: React.FC = () => {
         </div>
       </div>
 
-      {/* Informações de contato */}
+
       <div className="flex flex-wrap justify-center gap-6 mb-12">
-        {/* WhatsApp */}
+
         <div className="bg-[#121212] px-6 py-4 rounded-lg shadow-md flex items-center gap-4 w-64 text-center">
           <FontAwesomeIcon
             icon={faWhatsapp}
@@ -45,7 +46,6 @@ const Contact: React.FC = () => {
           </div>
         </div>
 
-        {/* Instagram */}
         <div className="bg-[#121212] px-6 py-4 rounded-lg shadow-md flex items-center gap-4 w-64 text-center">
           <FontAwesomeIcon
             icon={faInstagram}
@@ -65,7 +65,6 @@ const Contact: React.FC = () => {
         </div>
       </div>
 
-      {/* Imagem animada */}
       <div className="flex items-center justify-center">
         <Image
           src="/images/contact.png" // Caminho da imagem na pasta `public`
@@ -76,7 +75,7 @@ const Contact: React.FC = () => {
         />
       </div>
 
-      {/* Estilos para animação */}
+
       <style jsx>{`
         @keyframes rotate {
           0% {
@@ -96,3 +95,4 @@ const Contact: React.FC = () => {
 };
 
 export default Contact;
+*/}
