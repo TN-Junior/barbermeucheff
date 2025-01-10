@@ -143,7 +143,7 @@ const Home: React.FC = () => {
           <p className="text-lg mb-4">
             Estamos localizados em:
             <br />
-            Rua ..., Nº – Alto do Sol Nascente, Olinda – PE, 02046-010
+            Rua ..., Nº – Alto do Sol Nascente, Olinda – PE, xxxxx-xxx
           </p>
 
           {/* Telefone */}
