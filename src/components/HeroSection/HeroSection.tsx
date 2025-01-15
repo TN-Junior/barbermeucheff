@@ -1,14 +1,18 @@
 "use client";
+
 import React from "react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
-import "../../pages/_app"
 
 const Home: React.FC = () => {
   const router = useRouter();
 
-  const handleRedirect = () => {
-    router.push("https://wa.me/5581983061861");
+  const handleRedirect = (path?: string) => {
+    if (path) {
+      router.push(path);
+    } else {
+      router.push("https://wa.me/5581983061861");
+    }
   };
 
   // Animação para o texto
@@ -22,7 +26,7 @@ const Home: React.FC = () => {
       {/* Hero Section */}
       <section
         className="relative bg-cover bg-center h-screen"
-        style={{ backgroundImage: "url('images/Reimundo Barbearia.jpg')" }}
+        style={{ backgroundImage: "url('/images/Reimundo Barbearia.jpg')" }}
       >
         <div className="flex flex-col items-center justify-center h-full bg-black bg-opacity-60 text-white">
           <motion.h1
@@ -44,7 +48,7 @@ const Home: React.FC = () => {
             Somos apaixonados no cuidado do seu bem-estar
           </motion.p>
           <motion.button
-            onClick={handleRedirect}
+            onClick={() => handleRedirect()}
             className="bg-orange-500 px-6 py-3 text-lg font-semibold rounded hover:bg-orange-600 transition"
             initial="hidden"
             animate="visible"
@@ -86,13 +90,26 @@ const Home: React.FC = () => {
         </motion.h2>
         <div className="flex justify-center gap-16">
           {[
-            { label: "Corte", icon: "/images/maquina-de-cortar-cabelo.png" },
-            { label: "Barba", icon: "/images/tesouras.png" },
-            { label: "Corte + Barba", icon: "/images/navalha.png" },
+            {
+              label: "Corte",
+              icon: "/images/maquina-de-cortar-cabelo.png",
+              path: "/precos", // Redireciona para a página de preços
+            },
+            {
+              label: "Barba",
+              icon: "/images/tesouras.png",
+              path: "/precos", // Redireciona para a página de preços
+            },
+            {
+              label: "Corte + Barba",
+              icon: "/images/navalha.png",
+              path: "/precos", // Redireciona para a página de preços
+            },
           ].map((service, index) => (
             <motion.div
-              className="text-center"
+              className="text-center cursor-pointer"
               key={index}
+              onClick={() => handleRedirect(service.path)}
               initial="hidden"
               animate="visible"
               transition={{ duration: 1, delay: index * 0.5 }}
@@ -108,7 +125,7 @@ const Home: React.FC = () => {
           ))}
         </div>
         <motion.button
-          onClick={handleRedirect}
+          onClick={() => handleRedirect()}
           className="mt-8 bg-orange-500 px-6 py-3 text-lg font-semibold rounded hover:bg-orange-600 transition"
           initial="hidden"
           animate="visible"
@@ -131,7 +148,7 @@ const Home: React.FC = () => {
 
         {/* Logo no canto direito */}
         <img
-          src="images/homem.png" // Atualize para o caminho correto do logo
+          src="/images/homem.png"
           alt="Logo BMB Barbearia"
           className="w-28 absolute top-4 right-4"
         />
@@ -149,7 +166,7 @@ const Home: React.FC = () => {
           {/* Telefone */}
           <p className="text-lg font-semibold flex justify-center items-center gap-2">
             <img
-              src="/images/ce22435d-c760-4f4c-8305-e48d2402f2a0.jpg" // Atualize para o caminho correto do ícone de telefone
+              src="/images/ce22435d-c760-4f4c-8305-e48d2402f2a0.jpg"
               alt="Telefone"
               className="w-6"
             />
@@ -164,7 +181,7 @@ const Home: React.FC = () => {
               rel="noopener noreferrer"
             >
               <img
-                src="/images/55aa2de9-15f8-4a91-ab85-34a9528f47c7.jpg" // Atualize para o caminho correto do ícone do Facebook
+                src="/images/55aa2de9-15f8-4a91-ab85-34a9528f47c7.jpg"
                 alt="Facebook"
                 className="w-8"
               />
@@ -175,7 +192,7 @@ const Home: React.FC = () => {
               rel="noopener noreferrer"
             >
               <img
-                src="/images/instagram.png" // Atualize para o caminho correto do ícone do Instagram
+                src="/images/instagram.png"
                 alt="Instagram"
                 className="w-8"
               />
