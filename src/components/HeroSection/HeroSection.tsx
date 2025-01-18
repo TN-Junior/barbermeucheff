@@ -177,13 +177,13 @@ const Home: React.FC = () => {
           {/* Redes sociais */}
           <div className="flex justify-center gap-4 mt-4">
             <a
-              href="https://facebook.com"
+              href="https://wa.me/5581983061861"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img
-                src="/images/55aa2de9-15f8-4a91-ab85-34a9528f47c7.jpg"
-                alt="Facebook"
+                src="/images/whatsapp.png"
+                alt="Whatsapp"
                 className="w-8"
               />
             </a>
