@@ -45,7 +45,7 @@ const Home: React.FC = () => {
             transition={{ duration: 1, delay: 0.5 }}
             variants={textAnimation}
           >
-            Somos apaixonados no cuidado do seu bem-estar
+            Somos apaixonados por cuidar do seu bem-estar com dedicação e excelência.
           </motion.p>
           <motion.button
             onClick={() => handleRedirect()}
