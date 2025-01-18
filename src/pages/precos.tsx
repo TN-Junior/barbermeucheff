@@ -21,13 +21,14 @@ const Precos = () => {
     <div>
       {/* Imagem de fundo no topo */}
       <div
-        className="h-[700px] bg-cover bg-center bg-no-repeat relative"
+        className="h-[500px] sm:h-[700px] bg-cover bg-center bg-no-repeat relative"
         style={{
-          backgroundImage: "url('/images/handsome-man-cutting-beard-barber-shop-salon.jpg')", // Substitua pelo caminho correto da sua imagem
+          backgroundImage:
+            "url('/images/handsome-man-cutting-beard-barber-shop-salon.jpg')", // Substitua pelo caminho correto da sua imagem
         }}
       >
-        <div className="h-full flex flex-col items-center justify-center bg-black bg-opacity-60 text-white">
-          <h1 className="text-5xl font-bold mb-4">Tabela de Preços</h1>
+        <div className="h-full flex flex-col items-center justify-center bg-black bg-opacity-60 text-white text-center px-4">
+          <h1 className="text-4xl sm:text-5xl font-bold mb-4">Tabela de Preços</h1>
 
           {/* Ícones de redes sociais */}
           <div className="flex space-x-6 mt-4">
@@ -35,7 +36,7 @@ const Precos = () => {
               href="https://instagram.com" // Substitua pelo link do Instagram
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white text-3xl hover:text-gray-300 transition"
+              className="text-white text-2xl sm:text-3xl hover:text-gray-300 transition"
             >
               <FaInstagram />
             </a>
@@ -43,7 +44,7 @@ const Precos = () => {
               href="https://wa.me/5581983061861" // Substitua pelo link do WhatsApp
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white text-3xl hover:text-gray-300 transition"
+              className="text-white text-2xl sm:text-3xl hover:text-gray-300 transition"
             >
               <FaWhatsapp />
             </a>
@@ -53,15 +54,23 @@ const Precos = () => {
 
       {/* Lista de serviços */}
       <div className="bg-[#f0ece7] min-h-screen flex flex-col items-center justify-center">
-        <div className="w-full max-w-6xl px-8">
+        <div className="w-full max-w-6xl px-4 sm:px-8">
           {servicos.map((servico, index) => (
             <div
               key={index}
-              className="flex justify-between items-center py-6 text-black text-2xl font-bold"
+              className="flex flex-col sm:flex-row justify-between items-center py-4 sm:py-6 text-black text-lg sm:text-2xl font-bold"
             >
-              <span className="w-1/6 text-left">{servico.nome}</span> {/* Reduzido espaço reservado */}
-              <span className="flex-grow border-t-2 border-dashed border-black"></span> {/* Linha ajustada */}
-              <span className="w-1/6 text-right">{servico.preco}</span> {/* Reduzido espaço reservado */}
+              <span className="w-full sm:w-1/4 text-left mb-2 sm:mb-0">
+                {servico.nome}
+              </span>
+              {/* Linha ajustada */}
+              <span
+                className="flex-grow border-t-2 border-dashed border-black my-2 sm:my-0 w-full sm:w-auto"
+                style={{
+                  minWidth: "50px", // Garantindo um tamanho mínimo em telas pequenas
+                }}
+              ></span>
+              <span className="w-full sm:w-1/6 text-right">{servico.preco}</span>
             </div>
           ))}
         </div>

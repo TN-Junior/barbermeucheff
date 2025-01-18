@@ -148,10 +148,11 @@ const Home: React.FC = () => {
 
         {/* Logo no canto direito */}
         <img
-          src="/images/homem.png"
-          alt="Logo BMB Barbearia"
-          className="w-28 absolute top-4 right-4"
+            src="/images/homem.png"
+            alt="Logo BMB Barbearia"
+            className="w-28 absolute top-4 right-4 hidden sm:block"
         />
+
 
         <div className="relative text-center">
           <h3 className="text-2xl font-bold mb-2">BARBEARIA MEUCHEFF</h3>
