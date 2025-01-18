@@ -53,15 +53,15 @@ const Precos = () => {
 
       {/* Lista de serviços */}
       <div className="bg-[#f0ece7] min-h-screen flex flex-col items-center justify-center">
-        <div className="w-full max-w-md">
+        <div className="w-full max-w-6xl px-8">
           {servicos.map((servico, index) => (
             <div
               key={index}
-              className="flex justify-between items-center py-4 text-[#d17330] text-xl font-semibold"
+              className="flex justify-between items-center py-6 text-[#d17330] text-2xl font-bold"
             >
-              <span className="flex-1">{servico.nome}</span>
-              <span className="border-dotted border-t border-[#d17330] flex-grow mx-4"></span>
-              <span>{servico.preco}</span>
+              <span className="w-1/6 text-left">{servico.nome}</span> {/* Reduzido espaço reservado */}
+              <span className="flex-grow border-t-2 border-dashed border-[#d17330]"></span> {/* Linha ajustada */}
+              <span className="w-1/6 text-right">{servico.preco}</span> {/* Reduzido espaço reservado */}
             </div>
           ))}
         </div>
