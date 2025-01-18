@@ -33,7 +33,7 @@ const Precos = () => {
           {/* Ícones de redes sociais */}
           <div className="flex space-x-6 mt-4">
             <a
-              href="https://instagram.com" // Substitua pelo link do Instagram
+              href="https://www.instagram.com/barbearia_meucheff/" // Substitua pelo link do Instagram
               target="_blank"
               rel="noopener noreferrer"
               className="text-white text-2xl sm:text-3xl hover:text-gray-300 transition"
