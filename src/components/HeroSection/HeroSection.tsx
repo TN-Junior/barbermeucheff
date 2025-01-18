@@ -161,7 +161,7 @@ const Home: React.FC = () => {
           <p className="text-lg mb-4">
             Estamos localizados em:
             <br />
-            Rua ..., Nº – Alto do Sol Nascente, Olinda – PE, xxxxx-xxx
+            Rua Tradição Nº – Alto do Sol Nascente, Olinda – PE, 53200-100
           </p>
 
           {/* Telefone */}
@@ -171,7 +171,7 @@ const Home: React.FC = () => {
               alt="Telefone"
               className="w-6"
             />
-            (11) 98996-8178
+            (81) 98306-1861
           </p>
 
           {/* Redes sociais */}
@@ -188,10 +188,10 @@ const Home: React.FC = () => {
               />
             </a>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/barbearia_meucheff/"
               target="_blank"
               rel="noopener noreferrer"
-            >
+            > 
               <img
                 src="/images/instagram.png"
                 alt="Instagram"
