@@ -11,7 +11,7 @@ const Home: React.FC = () => {
     if (path) {
       router.push(path);
     } else {
-      router.push("https://wa.me/5581983061861");
+      router.push("/agendamento"); // Redireciona para a página de agendamento
     }
   };
 
@@ -57,15 +57,6 @@ const Home: React.FC = () => {
           >
             AGENDAR UM HORÁRIO
           </motion.button>
-          <motion.p
-            className="mt-4 text-sm"
-            initial="hidden"
-            animate="visible"
-            transition={{ duration: 1, delay: 1.5 }}
-            variants={textAnimation}
-          >
-            Consulte Disponibilidade
-          </motion.p>
         </div>
 
         {/* Quebradinha invertida */}
@@ -124,47 +115,28 @@ const Home: React.FC = () => {
             </motion.div>
           ))}
         </div>
-        <motion.button
-          onClick={() => handleRedirect()}
-          className="mt-8 bg-orange-500 px-6 py-3 text-lg font-semibold rounded hover:bg-orange-600 transition"
-          initial="hidden"
-          animate="visible"
-          transition={{ duration: 1, delay: 1 }}
-          variants={textAnimation}
-        >
-          QUERO AGENDAR HORÁRIO
-        </motion.button>
       </section>
 
       {/* Footer Section */}
       <footer className="bg-black text-white py-8 relative">
-        {/* Quebradinha invertida na parte superior */}
         <div
           className="absolute top-0 w-full h-16 bg-black"
           style={{
             clipPath: "polygon(0 0, 50% 100%, 100% 0)",
           }}
         ></div>
-
-        {/* Logo no canto direito */}
         <img
-            src="/images/homem.png"
-            alt="Logo BMB Barbearia"
-            className="w-28 absolute top-4 right-4 hidden sm:block"
+          src="/images/homem.png"
+          alt="Logo BMB Barbearia"
+          className="w-28 absolute top-4 right-4 hidden sm:block"
         />
-
-
         <div className="relative text-center">
           <h3 className="text-2xl font-bold mb-2">BARBEARIA MEUCHEFF</h3>
-
-          {/* Endereço */}
           <p className="text-lg mb-4">
             Estamos localizados em:
             <br />
             Rua Tradição Nº – Alto do Sol Nascente, Olinda – PE, 53200-100
           </p>
-
-          {/* Telefone */}
           <p className="text-lg font-semibold flex justify-center items-center gap-2">
             <img
               src="/images/ce22435d-c760-4f4c-8305-e48d2402f2a0.jpg"
@@ -173,8 +145,6 @@ const Home: React.FC = () => {
             />
             (81) 98306-1861
           </p>
-
-          {/* Redes sociais */}
           <div className="flex justify-center gap-4 mt-4">
             <a
               href="https://wa.me/5581983061861"
@@ -191,7 +161,7 @@ const Home: React.FC = () => {
               href="https://www.instagram.com/barbearia_meucheff/"
               target="_blank"
               rel="noopener noreferrer"
-            > 
+            >
               <img
                 src="/images/instagram.png"
                 alt="Instagram"
@@ -199,8 +169,6 @@ const Home: React.FC = () => {
               />
             </a>
           </div>
-
-          {/* Direitos reservados */}
           <p className="mt-4 text-sm">
             2025 MeuCheff Barbearia © — Todos os Direitos Reservados
           </p>
